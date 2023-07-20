@@ -29,7 +29,7 @@ public class ResourceCentre {
 			option = Helper.readInt("Enter an option > ");
 
 			if (option == OPTION_VIEW) {
-				// View all items
+				// View all items - Ara did all these
 				ResourceCentre.viewAllCamcorder(camcorderList);
 				ResourceCentre.viewAllChromebook(chromebookList);
 
@@ -244,7 +244,7 @@ public class ResourceCentre {
 				
 				camcorderList.get(i).setIsAvailable(false);
 				camcorderList.get(i).setDueDate(dueDate);
-				//YL done this
+				//YL done thiss
 				isLoaned = true;
 				
 			}
