@@ -29,7 +29,7 @@ public class ResourceCentre {
 			option = Helper.readInt("Enter an option > ");
 
 			if (option == OPTION_VIEW) {
-				// View all items
+				// View all items - Ara did all these
 				ResourceCentre.viewAllCamcorder(camcorderList);
 				ResourceCentre.viewAllChromebook(chromebookList);
 
@@ -241,12 +241,14 @@ public class ResourceCentre {
 		
 		for (int i = 0; i < camcorderList.size(); i++) {
 					
-			if (tag.equalsIgnoreCase(camcorderList.get(i).getAssetTag())				
-					&& camcorderList.get(i).getIsAvailable() == true) {
+			String assetTag = camcorderList.get(i).getAssetTag();
+			boolean availibility = camcorderList.get(i).getIsAvailable();
+			if (tag.equalsIgnoreCase(assetTag)				
+					&& availibility == true) {
 				
 				camcorderList.get(i).setIsAvailable(false);
 				camcorderList.get(i).setDueDate(dueDate);
-				
+				//YL done thiss
 				isLoaned = true;
 				
 			}
@@ -275,14 +277,16 @@ public class ResourceCentre {
 		
 		for (int i = 0; i < chromebookList.size(); i++) {
 
-			if (tag.equalsIgnoreCase(chromebookList.get(i).getAssetTag())
-					&& chromebookList.get(i).getIsAvailable() == true) {
+			String assetTag = chromebookList.get(i).getAssetTag();
+			boolean availibility = chromebookList.get(i).getIsAvailable();
+			if (tag.equalsIgnoreCase(assetTag)
+					&& availibility == true) {
 				
 				chromebookList.get(i).setIsAvailable(false);
 				chromebookList.get(i).setDueDate(dueDate);
 				
 				isLoaned = true;
-				
+				//YL done this
 			}
 		}
 		return isLoaned;
@@ -310,8 +314,10 @@ public class ResourceCentre {
 		
 		for (int i = 0; i < camcorderList.size(); i++) {
 
-			if (tag.equalsIgnoreCase(camcorderList.get(i).getAssetTag())
-					&& camcorderList.get(i).getIsAvailable() == false) {
+			String assetTag = camcorderList.get(i).getAssetTag();
+			boolean availibility = camcorderList.get(i).getIsAvailable();
+			if (tag.equalsIgnoreCase(assetTag)
+					&& availibility == false) {
 				camcorderList.get(i).setIsAvailable(true);
 				camcorderList.get(i).setDueDate("");
 				isReturned = true;
@@ -319,7 +325,7 @@ public class ResourceCentre {
 			}
 		}
 		return isReturned;
-		
+		//YL done this
 	}
 
 	public static void returnCamcorder(ArrayList<Camcorder> camcorderList) {
@@ -342,8 +348,10 @@ public class ResourceCentre {
 		
 		for (int i = 0; i < chromebookList.size(); i++) {
 
-			if (tag.equalsIgnoreCase(chromebookList.get(i).getAssetTag())
-					&& chromebookList.get(i).getIsAvailable() == false) {
+			String assetTag = chromebookList.get(i).getAssetTag();
+			boolean availibility = chromebookList.get(i).getIsAvailable();
+			if (tag.equalsIgnoreCase(assetTag)
+					&& availibility == false) {
 				chromebookList.get(i).setIsAvailable(true);
 				chromebookList.get(i).setDueDate("");
 				isReturned = true;
@@ -351,7 +359,7 @@ public class ResourceCentre {
 			}
 		}
 		return isReturned;
-		
+		//YL done this
 	}
 	
 	public static void returnChromebook(ArrayList<Chromebook> chromebookList) {
