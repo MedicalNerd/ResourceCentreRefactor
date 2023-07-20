@@ -36,7 +36,7 @@ public class ResourceCentre {
 			} else if (option == OPTION_ADD) {
 				// Add a new item
 				ResourceCentre.setHeader("ADD");			
-				itemTypeMenu();
+				itemTypeMenu(); //Derrick
 				
 				int itemType = Helper.readInt("Enter option to select item type > ");
 
@@ -59,7 +59,7 @@ public class ResourceCentre {
 			} else if (option == OPTION_LOAN) {
 				// Loan item
 				ResourceCentre.setHeader("LOAN");			
-				itemTypeMenu();
+				itemTypeMenu(); //Derrick
 				
 				int itemType = Helper.readInt("Enter option to select item type > ");
 
@@ -76,7 +76,7 @@ public class ResourceCentre {
 			} else if (option == OPTION_RETURN) {
 				// Return item
 				ResourceCentre.setHeader("RETURN");				
-				itemTypeMenu();
+				itemTypeMenu(); //Derrick
 				
 				int itemType = Helper.readInt("Enter option to select item type > ");
 				if (itemType == ITEM_TYPE_CAMCORDER) {
@@ -102,6 +102,7 @@ public class ResourceCentre {
 	/**
 	 * 
 	 */
+	//Derrick
 	public static void itemTypeMenu() {
 		ResourceCentre.setHeader("ITEM TYPES");
 		System.out.println("1. Camcorder");
