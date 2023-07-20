@@ -11,7 +11,7 @@ public class Item {
 		this.dueDate = "";
 		this.isAvailable = true;
 	}
-	
+
 	public String showAvailability(boolean isAvailable) {
 		String avail;
 
