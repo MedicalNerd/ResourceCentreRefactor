@@ -236,7 +236,7 @@ public class ResourceCentre {
 				
 				camcorderList.get(i).setIsAvailable(false);
 				camcorderList.get(i).setDueDate(dueDate);
-				
+				//YL done this
 				isLoaned = true;
 				
 			}
@@ -274,7 +274,7 @@ public class ResourceCentre {
 				chromebookList.get(i).setDueDate(dueDate);
 				
 				isLoaned = true;
-				
+				//YL done this
 			}
 		}
 		return isLoaned;
@@ -313,7 +313,7 @@ public class ResourceCentre {
 			}
 		}
 		return isReturned;
-		
+		//YL done this
 	}
 
 	public static void returnCamcorder(ArrayList<Camcorder> camcorderList) {
@@ -347,7 +347,7 @@ public class ResourceCentre {
 			}
 		}
 		return isReturned;
-		
+		//YL done this
 	}
 	
 	public static void returnChromebook(ArrayList<Chromebook> chromebookList) {
