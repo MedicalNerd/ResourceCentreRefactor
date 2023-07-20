@@ -4,7 +4,11 @@ public class ResourceCentre {
 
 
 	private static final int ITEM_TYPE_CHROMEBOOK = 2;
+<<<<<<< HEAD
 	private static final int ITEM_TYPE_CAMCODER = 1;
+=======
+	private static final int ITEM_TYPE_CAMCORDER = 1;
+>>>>>>> branch 'master' of https://github.com/MedicalNerd/ResourceCentreRefactor.git
 	private static final int OPTION_RETURN = 4;
 	private static final int OPTION_LOAN = 3;
 	private static final int OPTION_ADD = 2;
@@ -29,18 +33,30 @@ public class ResourceCentre {
 			option = Helper.readInt("Enter an option > ");
 
 			if (option == OPTION_VIEW) {
+<<<<<<< HEAD
 				// View all items
+=======
+				// View all items - Ara did all these
+>>>>>>> branch 'master' of https://github.com/MedicalNerd/ResourceCentreRefactor.git
 				ResourceCentre.viewAllCamcorder(camcorderList);
 				ResourceCentre.viewAllChromebook(chromebookList);
 
 			} else if (option == OPTION_ADD) {
 				// Add a new item
 				ResourceCentre.setHeader("ADD");			
+<<<<<<< HEAD
 				itemTypeMenu();
+=======
+				itemTypeMenu(); //Derrick
+>>>>>>> branch 'master' of https://github.com/MedicalNerd/ResourceCentreRefactor.git
 				
 				int itemType = Helper.readInt("Enter option to select item type > ");
 
+<<<<<<< HEAD
 				if (itemType == ITEM_TYPE_CAMCODER) {
+=======
+				if (itemType == ITEM_TYPE_CAMCORDER) {
+>>>>>>> branch 'master' of https://github.com/MedicalNerd/ResourceCentreRefactor.git
 					// Add a camcorder
 					Camcorder cc = inputCamcorder();
 					ResourceCentre.addCamcorder(camcorderList, cc);
@@ -59,14 +75,18 @@ public class ResourceCentre {
 			} else if (option == OPTION_LOAN) {
 				// Loan item
 				ResourceCentre.setHeader("LOAN");			
+<<<<<<< HEAD
 				itemTypeMenu();
+=======
+				itemTypeMenu(); //Derrick
+>>>>>>> branch 'master' of https://github.com/MedicalNerd/ResourceCentreRefactor.git
 				
 				int itemType = Helper.readInt("Enter option to select item type > ");
 
-				if (itemType == 1) {
+				if (itemType == ITEM_TYPE_CAMCORDER) {
 					// Loan camcorder
 					ResourceCentre.loanCamcorder(camcorderList);
-				} else if (itemType == 2) {
+				} else if (itemType == ITEM_TYPE_CHROMEBOOK) {
 					// Loan Chromebook
 					ResourceCentre.loanChromebook(chromebookList);
 				} else {
@@ -76,14 +96,18 @@ public class ResourceCentre {
 			} else if (option == OPTION_RETURN) {
 				// Return item
 				ResourceCentre.setHeader("RETURN");				
+<<<<<<< HEAD
 				itemTypeMenu();
+=======
+				itemTypeMenu(); //Derrick
+>>>>>>> branch 'master' of https://github.com/MedicalNerd/ResourceCentreRefactor.git
 				
 				int itemType = Helper.readInt("Enter option to select item type > ");
-				if (itemType == 1) {
+				if (itemType == ITEM_TYPE_CAMCORDER) {
 					// Return camcorder
 					ResourceCentre.returnCamcorder(camcorderList);
-				} else if (itemType == 2) {
-					// Return Chromebook
+				} else if (itemType == ITEM_TYPE_CHROMEBOOK) {
+					// Return Chromebook y
 					ResourceCentre.returnChromebook(chromebookList);
 				} else {
 					System.out.println("Invalid type");
@@ -102,6 +126,10 @@ public class ResourceCentre {
 	/**
 	 * 
 	 */
+<<<<<<< HEAD
+=======
+	//Derrick
+>>>>>>> branch 'master' of https://github.com/MedicalNerd/ResourceCentreRefactor.git
 	public static void itemTypeMenu() {
 		ResourceCentre.setHeader("ITEM TYPES");
 		System.out.println("1. Camcorder");
@@ -241,7 +269,7 @@ public class ResourceCentre {
 				
 				camcorderList.get(i).setIsAvailable(false);
 				camcorderList.get(i).setDueDate(dueDate);
-				
+				//YL done thiss
 				isLoaned = true;
 				
 			}
@@ -279,7 +307,7 @@ public class ResourceCentre {
 				chromebookList.get(i).setDueDate(dueDate);
 				
 				isLoaned = true;
-				
+				//YL done this
 			}
 		}
 		return isLoaned;
@@ -318,7 +346,7 @@ public class ResourceCentre {
 			}
 		}
 		return isReturned;
-		
+		//YL done this
 	}
 
 	public static void returnCamcorder(ArrayList<Camcorder> camcorderList) {
@@ -352,7 +380,7 @@ public class ResourceCentre {
 			}
 		}
 		return isReturned;
-		
+		//YL done this
 	}
 	
 	public static void returnChromebook(ArrayList<Chromebook> chromebookList) {
