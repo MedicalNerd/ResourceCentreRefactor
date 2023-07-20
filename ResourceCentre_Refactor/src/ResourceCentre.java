@@ -83,7 +83,7 @@ public class ResourceCentre {
 					// Return camcorder
 					ResourceCentre.returnCamcorder(camcorderList);
 				} else if (itemType == ITEM_TYPE_CHROMEBOOK) {
-					// Return Chromebook
+					// Return Chromebook y
 					ResourceCentre.returnChromebook(chromebookList);
 				} else {
 					System.out.println("Invalid type");
